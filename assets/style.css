@@ -1,0 +1,13 @@
+
+.high-score {
+    color: seagreen;
+}
+
+.time {
+    color: steelblue;
+    justify-content: flex-end;
+}
+
+.welcome {
+    display: center;
+}
