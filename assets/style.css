@@ -11,3 +11,9 @@
 .welcome {
     display: center;
 }
+
+#quiz-questions {
+    display: none;
+    flex-direction: column;
+}
+
