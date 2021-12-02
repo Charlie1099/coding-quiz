@@ -5,32 +5,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Quiz</title>
 </head>
 
 <body>
-    <div class="contaner">
-        <div id="home" class="flex-colum flex-container">
-            <div class="high-score">
-                <p>View High Score</p>
-                <p class="time">Time:</p>
+    <header>
+        <div id="score">
+                <p>Score:</p>
             </div>
-            <h1 class="welcome">Hi welcome to you're Quiz</h1>
-            <div class="start">
-                <button id="start">Start!</button>
+            <div>
+                <p id="time">Time:<span id="timer">0</span></p>
             </div>
+    </header>
+
+     <section id="quiz">
+        <h2 id="test_status">Coding Quiz</h2>
+        <div id="test">
+            <p>Welcome to Your Coding Quiz
+            </p>
+            <form id="form-input">
+            </form>
+            <button type="submit" id="start">Start Quiz</button>
+            <div>
+                <span id="highscore-item">
+                </span>
+            </div>
+          
+              <hr />
+          
+              <!-- High Score List -->
+              <div id="high-scores"></div>          
         </div>
-        <div>
-            <div id="quiz-questions">
-                <h1 id="q-text">Question</h1>
-                <button class="btn-answer" id="btn-a">Answer</button>
-                <button class="btn-answer" id="btn-b">Answer</button>
-                <button class="btn-answer" id="btn-c">Answer</button>
-                <button class="btn-answer" id="btn-d">Answer</button>
-            </div>
-        </div>
-    </div>
+    </section>
     <script src="./assets/js/game.js"></script>
 </body>
 

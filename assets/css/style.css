@@ -15,5 +15,6 @@
 #quiz-questions {
     display: none;
     flex-direction: column;
+    width: 60px;
 }
 
