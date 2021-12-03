@@ -1,5 +1,5 @@
 var pos = 0;
-var right = 0;
+var correct = 0;
 var test, test_status, questions, choice, choices, chA, chB, chC, chD;
 var  initalInput = document.querySelector("#initialsLable")
 var isPlaying = true 
@@ -66,12 +66,13 @@ function renderQuestion() {
 
     get("test_status").innerHTML = "Question "+(pos+1)+" of "+questions.length
 
-    question = questions[pos].question
+    question = questions[pos].question;
     chA = questions[pos].a
-    chA = questions[pos].b
-    chA = questions[pos].c
-    chA = questions[pos].d
+    chB = questions[pos].b
+    chC = questions[pos].c
+    chD = questions[pos].d
     // display the question and the anwsers
+    test.innerHTML = "<h2>"+question+"</h2>"
     test.innerHTML += "<label> <input type='radio' name='choices' value='A'> "+chA+"</label><br>"
     test.innerHTML += "<label> <input type='radio' name='choices' value='B'> "+chB+"</label><br>"
     test.innerHTML += "<label> <input type='radio' name='choices' value='C'> "+chC+"</label><br>"
@@ -92,6 +93,8 @@ function checkAnswer() {
     if(choice == questions[pos].answer){
         correct++
         console.log(correct)
+    } else {
+        countdown 
     }
     pos++
     localStorage.setItem("correctScore", ((100/questions.length)*correct))
@@ -102,7 +105,7 @@ var scoreBoardEl = document.getElementById("scores")
 
 function scoreBoard() {
     var initialsLabelEl = document.getElementById("initialsLabel")
-    localStorage.setItem("name", initialsLabelEl)
+    localStorage.setItem("name", initialsLabelEl.value)
 
     get("test_status").innerHTML = "High Score"
     test.innerHTML = "<h3>Your Score</h3>"+"<ul></ul>"
@@ -117,11 +120,11 @@ function scoreBoard() {
 
 var count = 0
 //timer
-var timerEl = document.getElementById("time")
+var timerEl = document.getElementById("timer")
 var startEl = document.getElementById("start")
 // this will count down
-function countdown() {
-    var timeLeft = 50
+function countown() {
+    var timeLeft = 100
     var timeInterval = setInterval(function() {
         if(!isPlaying) {
             clearInterval(timeInterval)
