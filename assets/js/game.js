@@ -93,9 +93,7 @@ function checkAnswer() {
     if(choice == questions[pos].answer){
         correct++
         console.log(correct)
-    } else {
-        countdown 
-    }
+    } 
     pos++
     localStorage.setItem("correctScore", ((100/questions.length)*correct))
     renderQuestion()
@@ -123,7 +121,7 @@ var count = 0
 var timerEl = document.getElementById("timer")
 var startEl = document.getElementById("start")
 // this will count down
-function countown() {
+function countDown() {
     var timeLeft = 100
     var timeInterval = setInterval(function() {
         if(!isPlaying) {
@@ -145,7 +143,7 @@ function countown() {
     }, 1000)
 
 }
-startEl.onclick = countdown
+startEl.onclick = countDown
 
 startEl.addEventListener("click", renderQuestion)
 scoreBoardEl.onclick = scoreBoard

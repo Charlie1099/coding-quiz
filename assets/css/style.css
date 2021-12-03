@@ -1,15 +1,28 @@
-
-.high-score {
-    color: seagreen;
+body {
+    background-color:darkgrey;
 }
 
-.time {
+header { 
+    display: flex;
+ margin-top: 0; 
+  flex-direction: row;
+  justify-content: space-evenly;
+ 
+}
+#scores {
+   color: seagreen;
+   font-size: x-large;
+}
+
+#timer {
     color: steelblue;
     justify-content: flex-end;
 }
 
-.welcome {
-    display: center;
+#quiz {
+    text-align: center;
+    color:blue;
+    
 }
 
 #quiz-questions {
@@ -18,3 +31,7 @@
     width: 60px;
 }
 
+#time {
+    text-align: right;
+    font-size: x-large;
+}
